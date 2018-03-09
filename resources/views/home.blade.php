@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!!!!
+                    You are logged in!!!! WHOAAA!
 
                     <example-component></example-component>
                 </div>
