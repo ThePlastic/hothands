@@ -1,4 +1,6 @@
 <?php
+error_reporting( E_ALL );
+ini_set( 'display_errors', 1 );
 
 /**
  * Laravel - A PHP Framework For Web Artisans
@@ -7,7 +9,7 @@
  * @author   Taylor Otwell <taylor@laravel.com>
  */
 
-define('LARAVEL_START', microtime(true));
+define( 'LARAVEL_START', microtime( true ) );
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,7 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -49,12 +51,12 @@ $app = require __DIR__ . '/../bootstrap/app.php';
 |
 */
 
-$kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
+$kernel = $app->make( Illuminate\Contracts\Http\Kernel::class );
 
 $response = $kernel->handle(
-    $request = Illuminate\Http\Request::capture()
+	$request = Illuminate\Http\Request::capture()
 );
 
 $response->send();
 
-$kernel->terminate($request, $response);
+$kernel->terminate( $request, $response );
